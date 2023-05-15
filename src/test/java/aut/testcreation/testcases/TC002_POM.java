@@ -36,7 +36,7 @@ public class TC002_POM extends SeleniumTestBase {
         formularioVuelosPage.fechaNacimientoContacto("15", "1992");
         formularioVuelosPage.preguntarSaludoASgdoPasajero(true);
         formularioVuelosPage.datosSegundoPasajero("Gabriel", "Martinez", "15", "1991");
-        formularioVuelosPage.checksFinales(true, false);
+        formularioVuelosPage.checksFinales(true,false);
         formularioVuelosPage.bajarYPresionarEnSgte();
         if (serviciosAdicionalesPage.mensajeServiciosAdicEncontrado().equals("Servicios adicionales")) {
             System.out.println("Test completado con éxito: La ejecución del test finaliza en la pestaña 'Servicios adicionales'. \nMensaje: 'Servicios adicionales' ha sido encontrado y desplegado en pantalla.\n ");

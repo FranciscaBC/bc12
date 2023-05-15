@@ -7,9 +7,9 @@ public class ServiciosAdicionalesPage extends SeleniumWrapper {
     public ServiciosAdicionalesPage(WebDriver driver) {
         super(driver);
     }
-    By avanzarSgte = By.xpath("//button[@data-test='lead-generation-submit-btn']");
+    By avanzarSgte = By.xpath("//button[contains(text(), 'Siguiente')]");
     By noElegirAsiento = By.xpath("//button[@data-testid='dialog-secondary-button']");
-    By locatorServiciosAdicionales = By.xpath("//span[@class='Stepperstyles__StyledStepTitle-sc-10m0j3k-4 Stepperstyles__Active-sc-10m0j3k-19 jElmHw'][contains(text(),'Servicios adicionales')]");
+    By locatorServiciosAdicionales = By.xpath("//span[contains(text(),'Servicios adicionales')]");
 
     public void presionarSiguiente() throws InterruptedException {
         Thread.sleep(2000);

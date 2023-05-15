@@ -8,8 +8,8 @@ public class TarifaVueloPage extends SeleniumWrapper {
     public TarifaVueloPage(WebDriver driver) {
         super(driver);
     }
-    By elegirTarifaClassic = By.xpath("//button[@class='Button-sc-1bbve8d-0 gzlNtv']");
-    By getElegirTarifaFlex = By.xpath("//button[@class='Button-sc-1bbve8d-0 ghhXOt']");
+    By elegirTarifaClassic = By.xpath("//button[contains(text(), 'Elegir Classic')]");
+    By getElegirTarifaFlex = By.xpath("//button[contains(text(), 'Elegir Flexible')]");
 
     public void elegirTarifa(boolean deseaTarifaClassic) throws InterruptedException {
         if (deseaTarifaClassic){

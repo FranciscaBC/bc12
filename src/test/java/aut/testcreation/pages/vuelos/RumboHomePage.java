@@ -13,22 +13,22 @@ public class RumboHomePage extends SeleniumWrapper {
         super(driver);
     }
 
-    By btnAceptarCookies = By.xpath("//button[@class='iubenda-cs-accept-btn iubenda-cs-btn-primary']");
-    By btnRechazarCookies = By.xpath("//button[@class='iubenda-cs-reject-btn iubenda-cs-btn-primary']");
-    By btnVueloIdaVuelta = By.xpath("//div[@class='d-vfn33k']");
-    By btnVueloSoloIda = By.xpath("//div[@class='d-1s1pmhl']");
-    By btnVueloMultidestino = By.xpath("//*[@class='d-1w89ccl']");
-    By btnLimpiar = By.xpath("//button[@class='d-1nmp0nm ed5mks90']");
-    By locatorOrigenVuelo = By.xpath("//input[@id=':Riqed6lalallbla2m:']");
-    By locatorDestinoVuelo = By.xpath("//input[@id=':Rjaed6lalallbla2m:']");
+    By btnAceptarCookies = By.xpath("//button[contains(text(), 'Aceptar todo')]");
+    By btnRechazarCookies = By.xpath("//button[contains(text(), 'Rechazar todo')]");
+    By btnVueloIdaVuelta = By.xpath("//div[contains(text(), 'Ida y vuelta')]");
+    By btnVueloSoloIda = By.xpath("//div[contains(text(), 'Solo ida')]");
+    By btnVueloMultidestino = By.xpath("//a[contains(text(), 'Multidestino')]");
+    By btnLimpiar = By.xpath("//button[contains(@aria-label,'Clear')]");
+    By locatorOrigenVuelo = By.xpath("//input[contains(@aria-label,'Origen')]");
+    By locatorDestinoVuelo = By.xpath("//input[contains(@aria-label,'Destino')]");
     By locatorFechaSoloIda = By.xpath("//button[@class='d-1kuzy14'][9]");
-    By locatorCalendario = By.xpath("//span[@class='d-aziqil']");
+    By locatorCalendario = By.xpath("//label[contains(text(), 'Fecha de ida')]");
     By locatorFechaIda = By.xpath("//button[@class='d-zlm2xw'][1]");
     By locatorFechaVuelta = By.xpath("//button[@class='d-1dj49va'][1]");
-    By locatorNumeroPasajeros = By.xpath("//span[@class='d-5n2gua']");
-    By btnBuscar = By.xpath("//button[@class='d-1jmk4ql']");
-    By errOrigenVuelo = By.xpath("//span[@class = 'd-1toc9z2'][contains(text(),'Introduce ciudad o aeropuerto de origen')]");
-    By btnAumentarPasajeros = By.xpath("//button[@aria-label='Aumentar el número de adultos']");
+    By locatorNumeroPasajeros = By.xpath("//label[contains(text(),'Pasajero')]");
+    By btnBuscar = By.xpath("//button[contains(@type,'sub')]");
+    By errOrigenVuelo = By.xpath("//span[contains(text(),'Introduce ciudad o aeropuerto de origen')]");
+    By btnAumentarPasajeros = By.xpath("//button[contains(@aria-label,'Aumentar el número de adultos')]");
 
 
     public void irARumboYCookies(boolean deseaAceptarCookies) {

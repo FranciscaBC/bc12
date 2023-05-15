@@ -14,9 +14,9 @@ public class OfertasVuelosPage extends SeleniumWrapper {
     }
     By locatorElegirVuelo = By.xpath("//div[@class='FullTripCard__PaymentContainer-sc-z8znd4-3 juamvE']");
     By locatorOfertas = By.xpath("//div[@class='FullJourneySummary__JourneySummary-sc-1yzjt4d-0 iwxxyr']");
-    By locatorModificarVuelo = By.xpath("//span[@class='search-summary__search']");
+    By locatorModificarVuelo = By.xpath("//span[contains(text(), 'Modificar')]");
     By locatorSoloIda = By.xpath("//div[@class='css-1s1pmhl']");
-    By btnLimpiar = By.xpath("//button[@class='css-1nmp0nm ed5mks90']");
+    By btnLimpiar = By.xpath("//button[@aria-label='Clear']");
     By locatorOrigen = By.xpath("//input[@aria-label='Origen']");
     By locatorDestino = By.xpath("//input[@aria-label='Destino']");
     By btnBuscarOtraVez = By.xpath("//button[@aria-label='Buscar']");
@@ -81,12 +81,12 @@ public class OfertasVuelosPage extends SeleniumWrapper {
             click(btnVerMas);
             Thread.sleep(2000);
             click(locatorElegirLatam);
-            Thread.sleep(2100);
+            Thread.sleep(4000);
         }else {
             scrolling(locatorElegirLatam);
             Thread.sleep(1500);
             click(locatorElegirLatam);
-            Thread.sleep(1500);
+            Thread.sleep(4000);
         }
 
     }

@@ -17,16 +17,16 @@ public class FormularioVuelosPage extends SeleniumWrapper {
     By locatorEmailContacto = By.xpath("//input[@id='contact-email']");
     By locatorTelefonoContacto = By.xpath("//input[@name='phone']");
     By checkBox = By.xpath("//span[@class= 'check']");
-    By locatorPasajero = By.xpath("//span[@class= 'traveller-info__traveller-label-title']");
-    By locatorDiaNacimientoPasajero = By.xpath("//input[@class='form-control text-input date__field date_day ']");
+    By locatorTxtPasajero = By.xpath("//div[contains(text(), 'Datos de los pasajeros')]");
+    By locatorDiaNacimientoPasajero = By.xpath("//input[@data-test='input-groups.1.travellers.1.dateOfBirth-day']");
     By locatorMesNacimientoPasajero = By.xpath("//select[@class='form-control select-input date__field']");
     By locatorAnioNacimientoContacto = By.xpath("//input[@data-test='input-groups.1.travellers.1.dateOfBirth-year']");
-    By locatorEquipaje = By.xpath("//div[@class= 'brb-main-title']");
-    By btnSiguiente = By.xpath("//button[@data-test='lead-generation-submit-btn']");
+    By btnSiguiente = By.xpath("//button[contains(text(), 'Siguiente')]");
     By locatorMsjeErrorAnnio = By.xpath("//div[contains(text(),'El adulto debe tener más de 12 años')]");
     By locatorBoxEquipaje = By.xpath("//div[@class='css-1akh2al']");
+    By locatorTxtAsistenciaEspecial = By.xpath("//div[contains(text(),'Asistencia especial')]");
     By locatorNombreSegundoPasajero = By.xpath("//input[@name='groups.1.travellers.2.name']");
-    By locatorApellidoSegundoPasajero = By.xpath("//input[@data-test='input-groups.1.travellers.2.surname']");
+    By locatorApellidoSegundoPasajero = By.xpath("//input[@name='groups.1.travellers.2.surname']");
     By locatorDiaNacSegundoPasajero = By.xpath("//input[@data-test='input-groups.1.travellers.2.dateOfBirth-day']");
     By locatorAnnioNacSegundoPasajero = By.xpath("//input[@data-test='input-groups.1.travellers.2.dateOfBirth-year']");
 
@@ -42,7 +42,7 @@ public class FormularioVuelosPage extends SeleniumWrapper {
     }
 
     public void preguntarSaludoAContacto(boolean deseaSerLlamadoSr) {
-        scrolling(locatorPasajero);
+        scrolling(locatorTxtPasajero);
         List<WebElement> checks = findElements(checkBox);
         if (deseaSerLlamadoSr) {
             checks.get(1).click();
@@ -115,7 +115,7 @@ public class FormularioVuelosPage extends SeleniumWrapper {
     }
 
     public void bajarYPresionarEnSgte() {
-        scrolling(locatorEquipaje);
+        scrolling(locatorTxtAsistenciaEspecial);
         click(btnSiguiente);
     }
 
@@ -123,6 +123,8 @@ public class FormularioVuelosPage extends SeleniumWrapper {
         return getText(locatorMsjeErrorAnnio);
     }
 }
+
+
 
 
 
